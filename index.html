@@ -8,8 +8,27 @@
 <body>
     <h1>You neighborhood friendly task manager!</h1>
     <input id="new-task" type="text" placeholder="Add a Task...">
-    <button id="add-task">Add Task</button>
+    <button id="add-task" onclick="addTask()">Add Task</button>
 
     <section id="to-do-list"></section>
 </body>
+
+<script>
+    /* This functions adds a task to the to-do-list section and clears out the placeholder */
+    function addTask()
+    {
+        // Get the input of the task
+        let task = document.getElementById('new-task').value;
+
+        // Set the const for the to do list
+        const toDoList = document.getElementById('to-do-list');
+
+        // Add the task to the to do list
+        toDoList.insertAdjacentHTML('beforeend', task);
+
+        // Clear our input placeholder
+        document.getElementById('new-task').value = "";
+    }
+
+</script>
 </html>
