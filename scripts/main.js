@@ -13,11 +13,17 @@
      // Sets the new to do item
      toDoItem.innerHTML = task;
      
-     // Adds the new to do item to the list
-     toDoList.appendChild(toDoItem);
+    if (isBlank(task))
+    {
+        //show error message
+        displyErrorMessage();
+    }
+    else 
+    {
+        // Adds the new to do item to the list
+        toDoList.appendChild(toDoItem);
+    }
 
      // Clear our input placeholder
      document.getElementById('new-task').value = "";
-
-     console.log(isBlank(task));
  }
