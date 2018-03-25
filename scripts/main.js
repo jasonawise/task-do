@@ -1,5 +1,5 @@
  /* This functions adds a task to the to-do-list section and clears out the placeholder */
- function addTask()
+ const addTask = function()
  {
      // Get the input of the task
      let task = document.getElementById('new-task').value;
