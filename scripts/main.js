@@ -18,4 +18,6 @@
 
      // Clear our input placeholder
      document.getElementById('new-task').value = "";
+
+     console.log(isBlank(task));
  }
