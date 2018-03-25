@@ -15,8 +15,9 @@
      
     if (isBlank(task))
     {
+        let field = document.getElementById('new-task')
         //show error message
-        displyErrorMessage("Please do not leave field blank...");
+        displyErrorMessage("Please do not leave field blank...", field);
     }
     else 
     {

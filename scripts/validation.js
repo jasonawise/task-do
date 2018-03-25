@@ -10,9 +10,11 @@ const isBlank = function(x)
     return isBlank;
 }
 
-const displyErrorMessage = function(message)
+const displyErrorMessage = function(message, field)
 {
     let displyErrorMessage = document.getElementById('errorMessage');
+
+    field.classList.add('error--highlight');
 
     displyErrorMessage.innerHTML = message;
 
