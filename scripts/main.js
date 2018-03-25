@@ -16,7 +16,7 @@
     if (isBlank(task))
     {
         //show error message
-        displyErrorMessage();
+        displyErrorMessage("Please do not leave field blank...");
     }
     else 
     {

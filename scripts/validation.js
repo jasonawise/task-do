@@ -10,11 +10,11 @@ const isBlank = function(x)
     return isBlank;
 }
 
-const displyErrorMessage = function()
+const displyErrorMessage = function(message)
 {
     let displyErrorMessage = document.getElementById('errorMessage');
 
-    displyErrorMessage.innerHTML = "Please enter a valid input";
+    displyErrorMessage.innerHTML = message;
 
     return displyErrorMessage;
 }
