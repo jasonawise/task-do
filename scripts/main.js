@@ -26,5 +26,5 @@
     }
 
      // Clear our input placeholder
-     document.getElementById('new-task').value = "";
+     clearPlaceholder(task);
  }
