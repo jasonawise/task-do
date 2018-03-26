@@ -2,7 +2,7 @@ $error: #F34213;
 
 .error--highlight 
 {
-    border: 1px solid $error; /* some kind of blue border */
+    border: 1px solid $error; /* some kind of red border */
 
     /* round the corners */
     -webkit-border-radius: 4px;
@@ -12,5 +12,5 @@ $error: #F34213;
     /* make it glow! */
     -webkit-box-shadow: 0px 0px 4px $error;
     -moz-box-shadow: 0px 0px 4px $error;
-    box-shadow: 0px 0px 4px $error; /* some variation of blue for the shadow */
+    box-shadow: 0px 0px 4px $error; /* some variation of red for the shadow */
 }

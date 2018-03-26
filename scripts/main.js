@@ -2,7 +2,7 @@
  const addTask = function()
  {
      // Get the input of the task
-     let task = document.getElementById('new-task').value;
+     let task = document.getElementById('new-task');
      
      // Set the const for the to do list
      const toDoList = document.getElementById('to-do-list');
@@ -11,16 +11,16 @@
      let toDoItem = document.createElement('li');
 
      // Sets the new to do item
-     toDoItem.innerHTML = task;
+     toDoItem.innerHTML = task.value;
      
-    if (isBlank(task))
+    if (isBlank(task.value))
     {
-        let field = document.getElementById('new-task')
         //show error message
-        displyErrorMessage("Please do not leave field blank...", field);
+        displyErrorMessage("Please do not leave field blank...", task);
     }
     else 
     {
+        checkErrorMessage(task);
         // Adds the new to do item to the list
         toDoList.appendChild(toDoItem);
     }

@@ -12,11 +12,22 @@ const isBlank = function(x)
 
 const displyErrorMessage = function(message, field)
 {
-    let displyErrorMessage = document.getElementById('errorMessage');
+    const displyErrorMessage = document.getElementById('errorMessage');
 
     field.classList.add('error--highlight');
 
     displyErrorMessage.innerHTML = message;
 
     return displyErrorMessage;
+}
+
+const checkErrorMessage = function(field)
+{
+    const errorMessage = document.getElementById('errorMessage');
+
+    if (errorMessage)
+    {
+        field.classList.remove('error--highlight');
+        errorMessage.innerHTML = "";
+    }
 }
