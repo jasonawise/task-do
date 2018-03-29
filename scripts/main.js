@@ -25,7 +25,7 @@
     }
     else 
     {
-        checkErrorMessage(task);
+        removeErrorMessage(task);
         // Adds the new to do item to the list
         toDoList.appendChild(toDoItem);
     }

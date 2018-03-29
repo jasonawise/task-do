@@ -21,7 +21,7 @@ const displyErrorMessage = function(message, field)
     return displyErrorMessage;
 }
 
-const checkErrorMessage = function(field)
+const removeErrorMessage = function(field)
 {
     const errorMessage = document.getElementById('errorMessage');
 
