@@ -1,3 +1,5 @@
+ let i = 1;
+ 
  /* This functions adds a task to the to-do-list section and clears out the placeholder */
  const addTask = function()
  {
@@ -9,10 +11,10 @@
 
     // Create the new to do item element
     let toDoItem = document.createElement('li');
-    toDoItem.id = "task" + taskNumber;
+    toDoItem.id = "task" + i;
 
     // Sets the new to do item
-    toDoItem.innerHTML = task.value + "<span><button id=\"delete-task\" onclick=\"deleteTask()\">X</button></span>";
+    toDoItem.innerHTML = task.value + "<span><button id=\"delete-task\" onclick=\"deleteTask(\'task\' + \'i\')\">X</button></span>";
      
     if (isBlank(task.value))
     {
@@ -28,9 +30,11 @@
 
     // Clear our input placeholder
     clearPlaceholder(task);
+
+    i++;
  }
 
- const deleteTask = function()
+ const deleteTask = function(task)
  {
-    
+    console.log(task);
  }
