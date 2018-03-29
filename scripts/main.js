@@ -12,9 +12,11 @@
     // Create the new to do item element
     let toDoItem = document.createElement('li');
     toDoItem.id = "task" + i;
+    
+    var id = toDoItem.id;
 
     // Sets the new to do item
-    toDoItem.innerHTML = task.value + "<span><button id=\"delete-task\" onclick=\"deleteTask(\'task\' + \'i\')\">X</button></span>";
+    toDoItem.innerHTML = task.value + "<span><button id=\"delete-task\" onclick=\"deleteTask(" + id + ")\">X</button></span>";
      
     if (isBlank(task.value))
     {
@@ -36,5 +38,5 @@
 
  const deleteTask = function(task)
  {
-    console.log(task);
+    task.remove();
  }
