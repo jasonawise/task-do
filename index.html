@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/normalize.css">
+    
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
     <h1>You neighborhood friendly task manager!</h1>
@@ -14,13 +17,17 @@
     <button id="add-task" onclick="addTask()">Add Task</button>
 
     <ul id="to-do-list">
+        <todo-item v-for = "item in toDoList" v-bind:todo = "item">
 
+        </todo-item>
     </ul>
 
     <div id="errorMessage"></div>
 </body>
 
-<script src="scripts/main.js"></script>
+<!-- <script src="scripts/main.js"></script> -->
 <script src="scripts/validation.js"></script>
 <script src="scripts/utility.js"></script>
+<script src="scripts/vue.js"></script>
+<script src="components/todo.js"></script>
 </html>
