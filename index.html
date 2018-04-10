@@ -17,13 +17,15 @@
     <button id="add-task" onclick="addTask()">Add Task</button>
 
     <ul id="to-do-list">
+        <todo-item v-for = "item in toDoList" v-bind:todo = "item">
+            
+        </todo-item>
     </ul>
 
     <div id="errorMessage"></div>
 </body>
 
 <script src="scripts/main.js"></script>
-<script src="scripts/vue.js"></script>
 <script src="scripts/validation.js"></script>
 <script src="scripts/utility.js"></script>
 </html>
